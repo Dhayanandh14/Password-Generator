@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genarator Beta V1.0</title>
 </head>
-<body style="background-color: black;color: white;">
-  <center style="margin-top: 200px;">
-    <label for="count" style="    position: relative;right: 100px;top: -12px">Number of Characters:</label>
-    <br>
-    <input type="number" id="count">
-    <button onclick="genarate()">Click to Genarate Password</button>
-    <br>
-    <br>
-    <div style=" position: relative;right: 56px;">
-        <input type="checkbox" id="lower">
-        <label for="lower" style="margin-right: 53px;">Lowercase:</label>
-        <input type="checkbox" id="upper">
-        <label for="upper">Uppercase:</label>
-    </div>
-    <br>
-    <br>
-    <div style="position: relative;right: 61px;">
-        <input type="checkbox" id="numbers">
-        <label for="numbers" style="    margin-right: 66px;">Numbers:</label>
 
-        <input type="checkbox" id="symbols">
-        <label for="symbols">Symbols:</label>
-    </div>
-    <br>
-    <br>
-    
-    <p id="pass"></p>
-</center> 
+<body style="background-color: black;color: white;">
+    <center style="margin-top: 200px;">
+        <label for="count" style="    position: relative;right: 100px;top: -12px">Number of Characters:</label>
+        <br>
+        <input type="number" id="count">
+        <button onclick="genarate()">Click to Genarate Password</button>
+        <br>
+        <br>
+        <div style=" position: relative;right: 56px;">
+            <input type="checkbox" id="lower">
+            <label for="lower" style="margin-right: 53px;">Lowercase:</label>
+            <input type="checkbox" id="upper">
+            <label for="upper">Uppercase:</label>
+        </div>
+        <br>
+        <br>
+        <div style="position: relative;right: 61px;">
+            <input type="checkbox" id="numbers">
+            <label for="numbers" style="    margin-right: 66px;">Numbers:</label>
+
+            <input type="checkbox" id="symbols">
+            <label for="symbols">Symbols:</label>
+        </div>
+        <br>
+        <br>
+
+        <p id="pass"></p>
+    </center>
     <script src="./script.js"></script>
 </body>
+
 </html>
