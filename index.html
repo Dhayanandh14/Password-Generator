@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genarator Beta V1.0</title>
+</head>
+<body style="background-color: black;color: white;">
+  <center style="margin-top: 200px;">
+    <label for="count" style="    position: relative;right: 100px;top: -12px">Number of Characters:</label>
+    <br>
+    <input type="number" id="count">
+    <button onclick="genarate()">Click to Genarate Password</button>
+    <br>
+    <br>
+    <div style=" position: relative;right: 56px;">
+        <input type="checkbox" id="lower">
+        <label for="lower" style="margin-right: 53px;">Lowercase:</label>
+        <input type="checkbox" id="upper">
+        <label for="upper">Uppercase:</label>
+    </div>
+    <br>
+    <br>
+    <div style="position: relative;right: 61px;">
+        <input type="checkbox" id="numbers">
+        <label for="numbers" style="    margin-right: 66px;">Numbers:</label>
+
+        <input type="checkbox" id="symbols">
+        <label for="symbols">Symbols:</label>
+    </div>
+    <br>
+    <br>
+    
+    <p id="pass"></p>
+</center> 
+    <script>
+        var lower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+        var upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        var number = [1,2,3,4,5,6,7,8,9,0]
+        var symbol = ['!','@','#','$','%','&','*','(',')','_','+','=','-']
+        total=[lower,upper,number,symbol]
+        function genarate(){
+            var low=document.getElementById("lower")
+            var up=document.getElementById("upper")
+            var num=document.getElementById("numbers")
+            var sym=document.getElementById("symbols")
+            var p= document.getElementById("pass")
+            var c =document.getElementById("count").value
+            text=""
+            ran=""
+            for(i=0;i<c;i++){
+                if(low.checked)  ran=ran + lower[Math.floor(Math.random()*26)]
+                if(up.checked)   ran=ran + upper[Math.floor(Math.random()*26)]
+                if(num.checked)   ran=ran + number[Math.floor(Math.random()*10)]
+                if(sym.checked)   ran=ran + symbol[Math.floor(Math.random()*13)]       
+            }
+            // console.log(ran.slice(0,c))
+            p.innerHTML=ran.slice(0,c)
+        }
+    </script>
+</body>
+</html>
